@@ -1,0 +1,370 @@
+$ cd
+
+Usuario@DESKTOP-THFG54T MINGW64 ~
+$ cd c:
+
+Usuario@DESKTOP-THFG54T MINGW64 /c
+$ git clone https://github.com/LuisAdrian2/examen.git
+Cloning into 'examen'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Usuario@DESKTOP-THFG54T MINGW64 /c
+$ git branch produccion
+fatal: not a git repository (or any of the parent directories): .git
+
+Usuario@DESKTOP-THFG54T MINGW64 /c
+$ cd examen
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git branch produccion
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git branch ventas
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git branch recurso_humano
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git checkout produccion
+Switched to branch 'produccion'
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (produccion)
+$ git status
+On branch produccion
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Nuevo Documento de texto.txt
+        imagenproducto.png
+        materiaprima.txt
+        productofinal.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (produccion)
+$ git add .
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (produccion)
+$ git status
+On branch produccion
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Nuevo Documento de texto.txt
+        new file:   imagenproducto.png
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (produccion)
+$ git checkout ventas
+Switched to branch 'ventas'
+A       Nuevo Documento de texto.txt
+A       imagenproducto.png
+A       materiaprima.txt
+A       productofinal.txt
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (ventas)
+$ git status
+On branch ventas
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Nuevo Documento de texto.txt
+        new file:   imagenproducto.png
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        tiendas.txt
+
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (ventas)
+$ git add .
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (ventas)
+$ git status
+On branch ventas
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Nuevo Documento de texto.txt
+        new file:   imagenproducto.png
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+        new file:   tiendas.txt
+
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (ventas)
+$ git checkout ventas
+Already on 'ventas'
+A       Nuevo Documento de texto.txt
+A       imagenproducto.png
+A       materiaprima.txt
+A       productofinal.txt
+A       tiendas.txt
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (ventas)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+A       Nuevo Documento de texto.txt
+A       imagenproducto.png
+A       materiaprima.txt
+A       productofinal.txt
+A       tiendas.txt
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (recurso_humano)
+$ git status
+On branch recurso_humano
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Nuevo Documento de texto.txt
+        new file:   imagenproducto.png
+        new file:   materiaprima.txt
+        new file:   productofinal.txt
+        new file:   tiendas.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    Nuevo Documento de texto.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        empleados.txt
+
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (recurso_humano)
+$ git add .
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (recurso_humano)
+$ git commit -m "empleados"
+[recurso_humano 652212e] empleados
+ 5 files changed, 16 insertions(+)
+ create mode 100644 empleados.txt
+ create mode 100644 imagenproducto.png
+ create mode 100644 materiaprima.txt
+ create mode 100644 productofinal.txt
+ create mode 100644 tiendas.txt
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (recurso_humano)
+$ git checkout produccion
+Switched to branch 'produccion'
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (produccion)
+$ git commit -m "producto"
+On branch produccion
+nothing to commit, working tree clean
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (produccion)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git merge produccion
+Already up to date.
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git up
+git: 'up' is not a git command. See 'git --help'.
+
+The most similar commands are
+        pull
+        push
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git push
+Everything up-to-date
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git merge ventas
+Already up to date.
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git merge recurso_humano
+Updating a4d7122..652212e
+Fast-forward
+ empleados.txt      |   5 +++++
+ imagenproducto.png | Bin 0 -> 116330 bytes
+ materiaprima.txt   |   6 ++++++
+ productofinal.txt  |   1 +
+ tiendas.txt        |   4 ++++
+ 5 files changed, 16 insertions(+)
+ create mode 100644 empleados.txt
+ create mode 100644 imagenproducto.png
+ create mode 100644 materiaprima.txt
+ create mode 100644 productofinal.txt
+ create mode 100644 tiendas.txt
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 114.13 KiB | 22.83 MiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/LuisAdrian2/examen.git
+   a4d7122..652212e  main -> main
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git push -u origin ventas
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ventas' on GitHub by visiting
+remote:      https://github.com/LuisAdrian2/examen/pull/new/ventas
+remote:
+To https://github.com/LuisAdrian2/examen.git
+ * [new branch]      ventas -> ventas
+branch 'ventas' set up to track 'origin/ventas'.
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git push -u origin recurso_humano
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'recurso_humano' on GitHub by visiting:
+remote:      https://github.com/LuisAdrian2/examen/pull/new/recurso_humano
+remote:
+To https://github.com/LuisAdrian2/examen.git
+ * [new branch]      recurso_humano -> recurso_humano
+branch 'recurso_humano' set up to track 'origin/recurso_humano'.
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git push -u origin produccion
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'produccion' on GitHub by visiting:
+remote:      https://github.com/LuisAdrian2/examen/pull/new/produccion
+remote:
+To https://github.com/LuisAdrian2/examen.git
+ * [new branch]      produccion -> produccion
+branch 'produccion' set up to track 'origin/produccion'.
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git tag version0.0.1 -m "esta es la version 1 del proyecyo"
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git push --tag
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 183 bytes | 183.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/LuisAdrian2/examen.git
+ * [new tag]         version0.0.1 -> version0.0.1
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git tag version1 -m "esta si es la version 1 del proyecyo"
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git push --tag
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 182 bytes | 182.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/LuisAdrian2/examen.git
+ * [new tag]         version1 -> version1
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   empleados.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git merge recurso_humano
+Already up to date.
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git tag version1.1 -m "esto es 1.1 version"
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git push --tag
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 172 bytes | 172.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/LuisAdrian2/examen.git
+ * [new tag]         version1.1 -> version1.1
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git add .
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git commit -m "Agregar nuevas cosas y empleados"
+[main 4bdb257] Agregar nuevas cosas y empleados
+ 7 files changed, 13 insertions(+), 2 deletions(-)
+ create mode 100644 fotos_empleados/empleado1.png
+ create mode 100644 fotos_empleados/empleado2.png
+ create mode 100644 fotos_empleados/empleado3.png
+ create mode 100644 fotos_empleados/empleado4.png
+ create mode 100644 fotos_empleados/empleado5.png
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git push
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 248.76 KiB | 35.54 MiB/s, done.
+Total 10 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/LuisAdrian2/examen.git
+   652212e..4bdb257  main -> main
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git checkout recursos_humanos
+error: pathspec 'recursos_humanos' did not match any file(s) known to git
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (main)
+$ git checkout recurso_humano
+Switched to branch 'recurso_humano'
+Your branch is up to date with 'origin/recurso_humano'.
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (recurso_humano)
+$ git status
+On branch recurso_humano
+Your branch is up to date with 'origin/recurso_humano'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        sueldos.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (recurso_humano)
+$ git add .
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (recurso_humano)
+$ git commit -m "Sueldos con los puestos de trabajo"
+[recurso_humano b1bc2e6] Sueldos con los puestos de trabajo
+ 1 file changed, 4 insertions(+)
+ create mode 100644 sueldos.txt
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (recurso_humano)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 380 bytes | 380.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/LuisAdrian2/examen.git
+   652212e..b1bc2e6  recurso_humano -> recurso_humano
+
+Usuario@DESKTOP-THFG54T MINGW64 /c/examen (recurso_humano)
+$
